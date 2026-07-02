@@ -6,17 +6,14 @@ def main():
     news = fetch_news()
 
     print("=" * 50)
-
-    print(f"取得件数：{len(news['data'])}")
-
+    print(f"取得件数：{len(news)}")
     print("=" * 50)
 
-    for article in news["data"]:
+    for article in news:
 
-        print(article["title"])
-        print(article["source"])
-        print(article["published_at"])
-
+        print(article.title)
+        print(article.source)
+        print(article.published_at)
         print("-" * 50)
 
 
