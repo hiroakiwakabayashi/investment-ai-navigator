@@ -1,9 +1,11 @@
 from dataclasses import dataclass
 from datetime import datetime
+from uuid import uuid4
 
 
 @dataclass
 class News:
+    id: str
     title: str
     url: str
     source: str
