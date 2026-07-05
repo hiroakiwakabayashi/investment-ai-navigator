@@ -1,9 +1,29 @@
-import requests
+import os
+from dotenv import load_dotenv
 
-BASE_URL = "http://localhost:8000"
+load_dotenv()
+
+BASE_URL = os.getenv("API_URL")
+
+
+def _get(endpoint: str):
+    """
+    共通GET処理
+    """
+
+    response = requests.get(
+        f"{BASE_URL}{endpoint}",
+        timeout=10
+    )
+
+    response.raise_for_status()
+
+    return response.json()
+
+
+def get_latest_report():
+    return _get("/reports/latest")
 
 
 def get_report_history():
-    response = requests.get(f"{BASE_URL}/reports/history", timeout=10)
-    response.raise_for_status()
-    return response.json()
+    return _get("/reports/history")
