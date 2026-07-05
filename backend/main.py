@@ -1,21 +1,26 @@
-from collector.marketaux import fetch_news
+from usecases.collect_news import collect_news
+from usecases.analyze_news import analyze_news
+from jobs.hourly_job import run
 
 
 def main():
 
-    news = fetch_news()
-
-    print("=" * 50)
-    print(f"取得件数：{len(news)}")
-    print("=" * 50)
-
-    for article in news:
-
-        print(article.title)
-        print(article.source)
-        print(article.published_at)
-        print("-" * 50)
+    run()
 
 
 if __name__ == "__main__":
     main()
+
+# def main():
+
+#     print("=" * 50)
+#     print("Investment AI Navigator")
+#     print("=" * 50)
+
+#     collect_news()
+#     analyze_news()
+
+
+# if __name__ == "__main__":
+#     main()
+
