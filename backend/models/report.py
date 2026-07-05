@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 
-
 @dataclass
 class Report:
 
@@ -17,3 +16,6 @@ class Report:
 
     bullish_score: int
     bearish_score: int
+
+    investment_score: int
+    investment_level: str

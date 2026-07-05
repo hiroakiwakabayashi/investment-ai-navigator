@@ -1,6 +1,7 @@
 from ai.report_generator import generate_report
-from database.analysis_repository import get_completed_analysis
-from database.report_repository import save_report
+from backend.database.analysis_repository import get_completed_analysis
+from backend.database.report_repository import save_report
+
 
 
 def execute(report_type: str):
@@ -10,3 +11,6 @@ def execute(report_type: str):
     report = generate_report(news, report_type)
 
     save_report(report)
+
+
+    

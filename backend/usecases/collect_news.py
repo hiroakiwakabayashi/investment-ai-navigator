@@ -1,5 +1,5 @@
 from collector.marketaux import fetch_news
-from database.news_repository import save_news
+from backend.database.news_repository import save_news
 
 
 def collect_news():

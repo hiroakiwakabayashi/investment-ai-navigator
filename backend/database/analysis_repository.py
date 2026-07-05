@@ -1,4 +1,4 @@
-from database.client import supabase
+from backend.database.client import supabase
 
 
 def save_analysis(result):

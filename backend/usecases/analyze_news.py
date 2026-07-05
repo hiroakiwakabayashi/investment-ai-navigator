@@ -1,6 +1,6 @@
 from ai.analyzer import analyze
-from database.analysis_repository import save_analysis
-from database.news_repository import (
+from backend.database.analysis_repository import save_analysis
+from backend.database.news_repository import (
     get_waiting_news,
     complete_analysis
 )
